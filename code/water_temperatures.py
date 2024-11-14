@@ -18,69 +18,6 @@ import cartopy
 import cartopy.io.shapereader as shpreader
 
 #https://smear-backend.2.rahtiapp.fi//search/timeseries/csv?tablevariable=KVJ_META.Tw15&from=2024-10-08T00%3A00%3A00.000&to=2024-10-09T23%3A59%3A59.999&quality=ANY&aggregation=NONE&interval=1
-
-varname = 'Tw15'
-current_datetime = datetime.datetime.now().strftime("%d.%m.%Y %H:%M")
-
-def GET_temperature_data():
-    """
-    Function for fetching data from SmartMet for given station name and 
-    time period. Returns the data as pandas DataFrame.
-    
-    Parameters
-    ----------
-
-    Returns
-    -------
-    df : pd DataFrame
-        fetched data
-    """
-    url = "https://smear-backend.2.rahtiapp.fi//search/timeseries/csv?tablevariable=KVJ_META.Tw15&from=2024-10-08T00%3A00%3A00.000&to=2024-10-09T23%3A59%3A59.999&quality=ANY&aggregation=NONE&interval=1"
-   # url_2m = "https://smear-backend.2.rahtiapp.fi//search/timeseries/csv?tablevariable=KVJ_META.Tw20&from=2024-10-08T00%3A00%3A00.000&to=2024-10-09T23%3A59%3A59.999&quality=ANY&aggregation=NONE&interval=1"
-
-#    url = 'http://smartmet.fmi.fi/timeseries'
-#    payload = {
-#        "fmisid" : "{}".format(station_id),
-#        "producer": "observations_fmi",
-#        "precision": "auto", 			#automatic precision
-#        "tz":"utc",
-#        "param": "stationname, stationlat, stationlon," \
-#            "fmisid," \
-#            "utctime," \
-#             'TW_PT1M_AVG',\
-#        "starttime": "{}".format(start_dt.strftime("%Y-%m-%dT%H:%M:%S")), 
-#        "endtime": "{}".format(end_dt.strftime("%Y-%m-%dT%H:%M:%S")),
-#        "timestep": "data",
-#        "format": "json"
-#        }
-    running = True
-    while running:
-        try:
-            r = requests.get(url)
-            print(r.url)
-            running = False
-        except: 
-            print("Connection refused by the server (Max retries exceeded)")
-            print("Taking a nap...")
-            print("ZZzzzz...")
-            time.sleep(10)
-            print("Slept for 10 secods, now continuing...")
-    
-    dictr = r.json() 
-   
-    df = pd.json_normalize(dictr)
-  #  print(df)
-    try:
-        #df['time']= pd.to_datetime(df['time'])
-        print('ok')
-        #df.to_csv('/work/data/haapanie/2024/WT_'+savename+\
-        #          '_{}.csv'.format(station_id), index=False)
-        return df
-    except:
-        print('empty dataframe')
-        #df.to_csv('/work/data/haapanie/2024/WT_'+savename+\
-        #          '_{}.csv'.format(station_id), index=False)
-        return  df
     
 if __name__ == '__main__':
     path = '/home/haapanie/hyytiala/'
@@ -154,14 +91,10 @@ if __name__ == '__main__':
     plt.title('Water temperature')
     plt.xlabel('Time')
     plt.ylabel('Depth')
-#    a = plt.contour(X, Y, z,cmap=cmap, vmin=vmin, vmax=vmax)
     plt.colorbar()
     plt.show()
-    
     print(df)
-
-
-        
+    
     cmap = cmocean.cm.thermal
     plt.figure(figsize=(15,7))
     a = plt.contour(X, Y, z,cmap=cmap, vmin=vmin, vmax=vmax)
@@ -253,15 +186,6 @@ if __name__ == '__main__':
     plt.plot(pd.to_datetime(times), rolling, alpha=0.7, c='r',label='daily')
     plt.legend()
     plt.show()
-    
-    
 
-
-    
-#    mds = df.index.get_level_values(0).dt.strftime('%m%d')
-#    print(mds)
-#    avg_year = df.groupby().mean()
-    #print(avg_year)
-    
     
     
