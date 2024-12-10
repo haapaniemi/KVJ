@@ -9,11 +9,11 @@ Analysis of atmosphere-surface interactions and feedbacks
 Authors
 
 	Marta Fregona (marta.fregona@helsinki.fi)
-	Anni Karvonen (anni.karvonen@helsinki.fi)
-	Pauline Ogola (pauline.ogola@helsinki.fi)
+        Anni Karvonen (anni.karvonen@helsinki.fi)
+        Pauline Ogola (pauline.ogola@helsinki.fi)
         Gunnar Thorsen Liahjell (gunnartl@uio.no)
-	Eevi Silvennoinen (eevi.silvennoinen@helsinki.fi)
-	Veera Haapaniemi (veera.haapaniemi@fmi.fi)
+        Eevi Silvennoinen (eevi.silvennoinen@helsinki.fi)
+        Veera Haapaniemi (veera.haapaniemi@fmi.fi)
 
 
 Input datasets
