@@ -8,7 +8,7 @@ Analysis of atmosphere-surface interactions and feedbacks
 
 Authors
 
-	Marta Fregona (marta.fregona@helsinki.fi)
+        Marta Fregona (marta.fregona@helsinki.fi)
         Anni Karvonen (anni.karvonen@helsinki.fi)
         Pauline Ogola (pauline.ogola@helsinki.fi)
         Gunnar Thorsen Liahjell (gunnartl@uio.no)
