@@ -26,3 +26,23 @@ Input datasets
 
 	Gap filled CO2 datasets from I. Mammarella and J. Ala-Könni (unpublished).
 
+
+Description
+
+
+        code
+        -------------------------------------------------------
+        * turnoverPeriodStripes.py
+        * water_temp_avg_year.py
+        * water_temperatures.py
+        
+
+        data
+        -------------------------------------------------------
+        * data_in
+        * data_out
+
+
+        image
+        -------------------------------------------------------
+        * saving generated images here
