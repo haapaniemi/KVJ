@@ -34,13 +34,12 @@ Description
         -------------------------------------------------------
         * turnoverPeriodStripes.py (Gunnar)
 		plotting timing of all turnovers in a calendar year
-        * water_temp_avg_year.py
-        * water_temperatures.py
 
 	* length_and_timing.py (Anni)
 		plotting turnover length and timing
         * meteorology_correlation.py (Anni)
                 plotting turnover length correlation with meteorological variables
+
 	* CO2_gapfilled_fluxes_IM/JAK.ipynb (Marta)
                 contain plots of the fluxes and calculations for shoulder seasons contribution to the annual CO2 budget
                 IM=boundary layer method for gap filling
@@ -52,6 +51,8 @@ Description
         * Convert_waterT.ipynb (Marta)
                 contains calculations and plots for the definition of turnover periods
         
+        * plot_heat_contents_n_winds.py (Veera)
+        * plot_gas_transfer_velocity.py (Veera)
 
         data
         -------------------------------------------------------
