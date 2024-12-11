@@ -4,7 +4,7 @@ analysis scripts
 
 @author: Anni Karvonen (anni.karvonen@helsinki.fi)
 
-Plotting script for turnover lengths and timings.
+Plotting script for turnover lengths correlation with meteorological variables.
 """
 
 import numpy as np
@@ -182,5 +182,5 @@ ax[1,1].tick_params(axis='x', labelsize=20)
 ax[1,1].tick_params(axis='y', labelsize=20)
 ax[1,1].legend(fontsize=10,loc='upper right')
 fig.tight_layout()
-plt.savefig(fig_path + 'length_correlation_with_meteo.png', dpi=400)
+plt.savefig(fig_path + 'length_correlations_with_meteo.png', dpi=400)
 plt.show()
