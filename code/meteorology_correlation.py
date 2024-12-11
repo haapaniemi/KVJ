@@ -1,3 +1,12 @@
+"""
+Analysis of atmosphere-surface interactions and feedbacks / Hyytiälä 2024
+analysis scripts
+
+@author: Anni Karvonen (anni.karvonen@helsinki.fi)
+
+Plotting script for turnover lengths and timings.
+"""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,14 +16,18 @@ import datetime as dt
 from datetime import timedelta
 from scipy import stats
 
+fig_path = 'KVJ/image/'
+data_in = 'KVJ/data/data_in/'
+data_out = 'KVJ/data/data_out/'
+
 #get temperature data
-dataframe1 = pd.read_pickle("wpt_kuivajarvi.pkl")
+dataframe1 = pd.read_pickle(data_out + "wpt_kuivajarvi.pkl")
 dataframe1=dataframe1.reset_index()
 
 dataframe1['timestamp']=pd.to_datetime(dataframe1['timestamp'])
 
 #get radiation data
-dataframe_radiation=pd.read_pickle("data_radiation_data.pkl")
+dataframe_radiation=pd.read_pickle(data_out + "data_radiation_data.pkl")
 dataframe_radiation=dataframe_radiation.reset_index()
 
 #mean temperature of turnovers
@@ -169,6 +182,5 @@ ax[1,1].tick_params(axis='x', labelsize=20)
 ax[1,1].tick_params(axis='y', labelsize=20)
 ax[1,1].legend(fontsize=10,loc='upper right')
 fig.tight_layout()
-
-
+plt.savefig(fig_path + 'length_correlation_with_meteo.png', dpi=400)
 plt.show()
