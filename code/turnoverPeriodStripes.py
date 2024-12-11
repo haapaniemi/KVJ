@@ -1,3 +1,11 @@
+"""
+Analysis of atmosphere-surface interactions and feedbacks / Hyytiälä 2024
+analysis scripts
+
+@author: Gunnar Thorsen Liahjell (gunnartl@uio.no)
+
+Plotting script for turnover period stripes on calendar year.
+"""
 turnover_periods = pd.read_pickle("data/turnover_periods.pkl") #this is the easiest to use
 #turnover_periods = pd.read_read("data/turnover_periods.csv")  # this needs to be structured so that it hase a column of datetime.objects
 
